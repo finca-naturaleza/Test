@@ -5,14 +5,14 @@ from esphome.const import CONF_ID, CONF_PIN
 from esphome.components import sensor, output, number
 from esphome.cpp_helpers import gpio_pin_expression
 
-empty_component_ns = cg.esphome_ns.namespace("empty_component")
-EmptyComponent = empty_component_ns.class_("EmptyComponent", cg.Component)
+my_empty_component_ns = cg.esphome_ns.namespace("my_empty_component")
+MyEmptyComponent = my_empty_component_ns.class_("MyEmptyComponent", cg.Component)
 
 CONF_SENSOR = "sensor"
 
 CONFIG_SCHEMA = cv.Schema(
     {
-        cv.GenerateID(): cv.declare_id(EmptyComponent),
+        cv.GenerateID(): cv.declare_id(MyEmptyComponent),
         cv.Required(CONF_PIN): pins.gpio_output_pin_schema,
     }
 ).extend(cv.COMPONENT_SCHEMA)

@@ -3,9 +3,9 @@
 #include "esphome/core/component.h"
 
 namespace esphome {
-namespace empty_component {
+namespace my_empty_component {
 
-class EmptyComponent : public Component {
+class MyEmptyComponent : public Component {
  public:
   void setup() override;
   void loop() override;
@@ -20,5 +20,5 @@ class EmptyComponent : public Component {
 };
 
 
-}  // namespace empty_component
+}  // namespace my_empty_component
 }  // namespace esphome
