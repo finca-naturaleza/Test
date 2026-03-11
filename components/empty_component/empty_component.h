@@ -10,6 +10,11 @@ class EmptyComponent : public Component {
   void setup() override;
   void loop() override;
   void dump_config() override;
+  
+  void set_sensor(sensor::Sensor *sensor) { sensor_ = sensor; }
+  
+ protected:
+  sensor::Sensor *sensor_{nullptr};
 };
 
 
