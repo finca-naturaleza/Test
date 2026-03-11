@@ -12,8 +12,10 @@ class EmptyComponent : public Component {
   void dump_config() override;
   
   void set_sensor(sensor::Sensor *sensor) { sensor_ = sensor; }
-  
+  void set_output_pin(GPIOPin *pin) { this->pin_ = pin; }
+
  protected:
+  GPIOPin *pin_;
   sensor::Sensor *sensor_{nullptr};
 };
 
